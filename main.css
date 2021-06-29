@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
 * {
   font-family: "Fredoka One", cursive;
+  text-align: center;
 }
 body {
   margin: 0;
@@ -10,21 +12,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  overflow: hidden;
   background-color: #ff4b4a;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
+
+/** Start Page */
+
 #container {
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4em;
 }
 header {
   font-size: 10em;
-  margin-bottom: 0.25em;
   font-weight: bolder;
 }
 #x {
@@ -33,11 +37,7 @@ header {
   padding-right: 0.05em;
 }
 #o {
-  /* background-color: #ffc927;
-  color: #ff4b4a; */
-
   color: #ffc927;
-  border-radius: 0.12em;
   padding-left: 0.05em;
   padding-right: 0.05em;
 }
@@ -55,4 +55,71 @@ button {
   height: 5em;
   width: 15em;
   font-size: large;
+}
+
+/** SinglePlayer Page */
+#singleplayer-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#nostart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
+}
+#nostart-logo {
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+}
+#x {
+  background-color: #ffc927;
+  color: #ff4b4a;
+  border-radius: 0.12em;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+}
+#o {
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+}
+h1 {
+  color: #ffc927;
+}
+h2 {
+  color: #ffc927d5;
+  margin: 1.5em;
+}
+input {
+  border-style: none;
+  border-radius: 0.4em;
+  background-color: #ffc9274b;
+  color: #ffc927d7;
+  font-size: x-large;
+  outline: none;
+}
+#diffs {
+  display: flex;
+  flex-direction: column;
+}
+#diffs button,
+#navbutts button {
+  background-color: #ffc92750;
+  color: #ffc927;
+  margin: 0.5em;
+  height: 4em;
+  width: 11em;
+}
+#navbutts {
+  display: flex;
+  width: 60%;
+  margin-top: 1em;
+}
+#navbutts button {
+  background-color: #ffc927a9;
+  color: #ff4b4a;
 }

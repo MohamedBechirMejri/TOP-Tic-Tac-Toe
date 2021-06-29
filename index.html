@@ -8,14 +8,32 @@
   </head>
   <body>
     <div id="container">
-      <header><span id="x">X</span><span id="o">O</span></header>
-      <div id="start-page" class="page">
+      <div id="nostart-header">
+        <header id="nostart-logo">
+          <span id="x">X</span><span id="o">O</span>
+        </header>
+        <h1 class="">tic tac toe</h1>
+      </div>
+      <div id="start-page" class="hidden">
         <button id="singleplayer-button">Singleplayer</button>
         <button id="multiplayer-button">Multiplayer</button>
       </div>
-      <div id="singleplayer-page" class="hidden page"></div>
-      <div id="multiplayer-page" class="hidden page"></div>
-      <div id="game-page" class="hidden page"></div>
+      <div id="singleplayer-page" class="">
+        <h2>YOUR NAME</h2>
+        <input type="text" value="PLAYER" />
+        <h2>A.I DIFFICULTY</h2>
+        <div id="diffs">
+          <button value="easy">Easy</button>
+          <button value="normal">Normal</button>
+          <button value="impossible">Impossible</button>
+        </div>
+        <div id="navbutts">
+          <button>Back</button>
+          <button>Start</button>
+        </div>
+      </div>
+      <div id="multiplayer-page" class="hidden"></div>
+      <div id="game-page" class="hidden"></div>
     </div>
     <script src="main.js" async defer></script>
   </body>
