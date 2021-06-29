@@ -18,7 +18,7 @@
         <button id="singleplayer-button">Singleplayer</button>
         <button id="multiplayer-button">Multiplayer</button>
       </div>
-      <div id="singleplayer-page" class="">
+      <div id="singleplayer-page" class="hidden">
         <h2>YOUR NAME</h2>
         <input type="text" value="PLAYER" />
         <h2>A.I DIFFICULTY</h2>
@@ -27,12 +27,21 @@
           <button value="normal">Normal</button>
           <button value="impossible">Impossible</button>
         </div>
-        <div id="navbutts">
+        <div class="navbutts">
           <button>Back</button>
           <button>Start</button>
         </div>
       </div>
-      <div id="multiplayer-page" class="hidden"></div>
+      <div id="multiplayer-page" class="">
+        <h2>PLAYER X</h2>
+        <input type="text" value="x" />
+        <h2>PLAYER O</h2>
+        <input type="text" value="o" />
+        <div class="navbutts">
+          <button>Back</button>
+          <button>Start</button>
+        </div>
+      </div>
       <div id="game-page" class="hidden"></div>
     </div>
     <script src="main.js" async defer></script>

@@ -58,7 +58,8 @@ button {
 }
 
 /** SinglePlayer Page */
-#singleplayer-page {
+#singleplayer-page,
+#multiplayer-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,19 +108,37 @@ input {
   flex-direction: column;
 }
 #diffs button,
-#navbutts button {
+.navbutts button {
   background-color: #ffc92750;
   color: #ffc927;
   margin: 0.5em;
   height: 4em;
   width: 11em;
 }
-#navbutts {
+.navbutts {
   display: flex;
   width: 60%;
   margin-top: 1em;
 }
-#navbutts button {
+.navbutts button {
   background-color: #ffc927a9;
   color: #ff4b4a;
+}
+
+/** Multiplayer Page */
+#multiplayer-page .navbutts {
+  margin-top: 4em;
+}
+#multiplayer-page h2 {
+  margin-top: 2em;
+
+  background-color: #ffc927a9;
+  color: #ff4b4a;
+  border-radius: 0.14em;
+  padding: 0.14em;
+  font-size: xx-large;
+}
+#multiplayer-page input {
+  width: 50%;
+  font-size: xx-large;
 }
