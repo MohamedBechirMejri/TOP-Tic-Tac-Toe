@@ -19,3 +19,16 @@ multiplayerButton.addEventListener("click", () => {
   startPage.classList.add("hidden");
   multiplayerPage.classList.remove("hidden");
 });
+
+//* SingleplayerPage MultiplayerPage GamePage
+
+const backButtons = document.querySelectorAll(".backbutton");
+
+backButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    startPage.classList.remove("hidden");
+    singleplayerPage.classList.add("hidden");
+    multiplayerPage.classList.add("hidden");
+    gamePage.classList.add("hidden");
+  });
+});
