@@ -32,7 +32,7 @@
           <button>Start</button>
         </div>
       </div>
-      <div id="multiplayer-page" class="">
+      <div id="multiplayer-page" class="hidden">
         <h2>PLAYER X</h2>
         <input type="text" value="x" />
         <h2>PLAYER O</h2>
@@ -42,7 +42,29 @@
           <button>Start</button>
         </div>
       </div>
-      <div id="game-page" class="hidden"></div>
+      <div id="game-page" class="">
+        <div id="scoreboard">
+          <p>
+            <span>player</span> : <span>score</span> | <span>score</span> :
+            <span>player</span>
+          </p>
+        </div>
+        <div id="playtable">
+          <div id="1" class="playsquare"><h3>X</h3></div>
+          <div id="2" class="playsquare"><h3>O</h3></div>
+          <div id="3" class="playsquare"><h3>O</h3></div>
+          <div id="4" class="playsquare"><h3>X</h3></div>
+          <div id="5" class="playsquare"><h3>O</h3></div>
+          <div id="6" class="playsquare"><h3>X</h3></div>
+          <div id="7" class="playsquare"><h3></h3></div>
+          <div id="8" class="playsquare"><h3>O</h3></div>
+          <div id="9" class="playsquare"><h3></h3></div>
+        </div>
+        <div id="gamepagebutts" class="navbutts">
+          <button>Main Menu</button>
+          <button>Restart</button>
+        </div>
+      </div>
     </div>
     <script src="main.js" async defer></script>
   </body>

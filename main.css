@@ -119,6 +119,7 @@ input {
   display: flex;
   width: 60%;
   margin-top: 1em;
+  justify-content: center;
 }
 .navbutts button {
   background-color: #ffc927a9;
@@ -131,7 +132,6 @@ input {
 }
 #multiplayer-page h2 {
   margin-top: 2em;
-
   background-color: #ffc927a9;
   color: #ff4b4a;
   border-radius: 0.14em;
@@ -141,4 +141,43 @@ input {
 #multiplayer-page input {
   width: 50%;
   font-size: xx-large;
+}
+
+/** Game Page */
+#game-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center
+}
+#scoreboard {
+  background-color: #ffc927a9;
+  color: #ff4b4a;
+  border-radius: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin: 0.5em;
+  margin-bottom: 1em;
+}
+#playtable {
+  width: 95vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.playsquare {
+  background-color: #ffc927bb;
+  border-radius: 0.3em;
+  margin: 0.09em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3 {
+  font-size: 3em;
+  margin: 0px;
+  -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: #ff4b4a;
 }
