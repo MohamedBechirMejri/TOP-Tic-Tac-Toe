@@ -8,16 +8,22 @@
   </head>
   <body>
     <div id="container">
-      <div id="nostart-header">
-        <header id="nostart-logo">
+      <div id="start-header">
+        <header id="start-logo">
           <span id="x">X</span><span id="o">O</span>
         </header>
-        <h1 class="">tic tac toe</h1>
+        <h1 class="hidden">tic tac toe</h1>
       </div>
-      <div id="start-page" class="hidden">
+
+      <!-- SECTION Start Page -->
+
+      <div id="start-page" class="">
         <button id="singleplayer-button">Singleplayer</button>
         <button id="multiplayer-button">Multiplayer</button>
       </div>
+
+      <!-- SECTION Singleplayer Page -->
+
       <div id="singleplayer-page" class="hidden">
         <h2>YOUR NAME</h2>
         <input type="text" value="PLAYER" />
@@ -32,6 +38,9 @@
           <button>Start</button>
         </div>
       </div>
+
+      <!-- SECTION Multiplayer Page -->
+
       <div id="multiplayer-page" class="hidden">
         <h2>PLAYER X</h2>
         <input type="text" value="x" />
@@ -42,7 +51,10 @@
           <button>Start</button>
         </div>
       </div>
-      <div id="game-page" class="">
+
+      <!-- SECTION  Game Page -->
+
+      <div id="game-page" class="hidden">
         <div id="scoreboard">
           <p>
             <span>player</span> : <span>score</span> | <span>score</span> :
