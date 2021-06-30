@@ -43,3 +43,18 @@
     });
   });
 })();
+
+//* GamePage
+
+const game = () => {
+  const playsquares = document.querySelectorAll(".playsquare");
+  let sign = "X";
+  let counter = 0;
+  playsquares.forEach((square) => {
+    square.addEventListener("click", () => {
+      square.firstChild.innerText = sign;
+      sign === "X" ? (sign = "O") : (sign = "X");
+    });
+  });
+};
+game();
