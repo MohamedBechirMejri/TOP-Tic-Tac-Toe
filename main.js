@@ -23,6 +23,7 @@ multiplayerButton.addEventListener("click", () => {
 //* SingleplayerPage MultiplayerPage GamePage
 
 const backButtons = document.querySelectorAll(".backbutton");
+const startButtons = document.querySelectorAll(".startbutton");
 
 backButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -30,5 +31,13 @@ backButtons.forEach((button) => {
     singleplayerPage.classList.add("hidden");
     multiplayerPage.classList.add("hidden");
     gamePage.classList.add("hidden");
+  });
+});
+
+startButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    singleplayerPage.classList.add("hidden");
+    multiplayerPage.classList.add("hidden");
+    gamePage.classList.remove("hidden");
   });
 });
