@@ -47,14 +47,28 @@
 //* GamePage
 
 const game = () => {
-  const playsquares = document.querySelectorAll(".playsquare");
+  let playsquares = document.querySelectorAll(".playsquare");
   let sign = "X";
-  let counter = 0;
+  let pickOrder = [];
+
   playsquares.forEach((square) => {
-    square.addEventListener("click", () => {
-      square.firstChild.innerText = sign;
-      sign === "X" ? (sign = "O") : (sign = "X");
-    });
+    square.replaceWith(square.cloneNode(true)); // fix duplicating events
+  });
+  playsquares = document.querySelectorAll(".playsquare");
+  playsquares.forEach((square) => {
+    square.firstChild.innerText = "";
+
+    square.addEventListener(
+      "click",
+      () => {
+        square.firstChild.innerText = sign;
+        sign === "X" ? (sign = "O") : (sign = "X");
+        pickOrder.push(`${square.getAttribute("id")} : ${sign}`);
+        console.log(pickOrder);
+        //TODO show which one's turn
+      },
+      { once: true }
+    );
   });
 };
 game();
