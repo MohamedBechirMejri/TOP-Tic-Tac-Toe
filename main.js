@@ -69,7 +69,7 @@ const game = () => {
   playsquares = document.querySelectorAll(".playsquare");
   playsquares.forEach((square) => {
     square.firstChild.innerText = "";
-
+    square.style.pointerEvents = "";
     square.addEventListener(
       "click",
       () => {
@@ -89,6 +89,9 @@ const game = () => {
         ) {
           winner = sign;
           endGame(winner);
+          playsquares.forEach(
+            (square) => (square.style.pointerEvents = "none")
+          );
         } else if (counter == 9) {
           endGame(winner);
         }
