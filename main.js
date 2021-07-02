@@ -62,8 +62,9 @@ const game = () => {
       "click",
       () => {
         square.firstChild.innerText = sign;
-        sign === "X" ? (sign = "O") : (sign = "X");
         pickOrder.push(`${square.getAttribute("id")} : ${sign}`);
+        sign === "X" ? (sign = "O") : (sign = "X");
+
         console.log(pickOrder);
         //TODO show which one's turn
       },
