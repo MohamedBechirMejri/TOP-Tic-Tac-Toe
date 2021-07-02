@@ -49,7 +49,17 @@
 const game = () => {
   let playsquares = document.querySelectorAll(".playsquare");
   let sign = "X";
-  let pickOrder = [];
+  let pickOrder = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+  };
 
   playsquares.forEach((square) => {
     square.replaceWith(square.cloneNode(true)); // fix duplicating events
@@ -62,7 +72,22 @@ const game = () => {
       "click",
       () => {
         square.firstChild.innerText = sign;
-        pickOrder.push([square.getAttribute("id"), sign]);
+        let id = square.getAttribute("id");
+        pickOrder[id] = sign;
+
+        if (
+          (pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]) ||
+          (pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]) ||
+          (pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]) ||
+          (pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]) ||
+          (pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]) ||
+          (pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]) ||
+          (pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]) ||
+          (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
+        ) {
+          console.log("yes");
+        }
+
         sign === "X" ? (sign = "O") : (sign = "X");
 
         console.log(pickOrder);
