@@ -62,7 +62,7 @@ const game = () => {
       "click",
       () => {
         square.firstChild.innerText = sign;
-        pickOrder.push(`${square.getAttribute("id")} : ${sign}`);
+        pickOrder.push([square.getAttribute("id"), sign]);
         sign === "X" ? (sign = "O") : (sign = "X");
 
         console.log(pickOrder);
