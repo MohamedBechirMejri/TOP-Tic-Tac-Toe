@@ -6,7 +6,7 @@
   const gamePage = document.getElementById("game-page");
   // TODO work on header
 
-  //* Start Page
+  //*SECTION Start Page
 
   const singleplayerButton = document.getElementById("singleplayer-button");
   const multiplayerButton = document.getElementById("multiplayer-button");
@@ -19,9 +19,11 @@
   multiplayerButton.addEventListener("click", () => {
     startPage.classList.add("hidden");
     multiplayerPage.classList.remove("hidden");
+
+    mpStart();
   });
 
-  //* SingleplayerPage MultiplayerPage GamePage
+  //*SECTION SingleplayerPage MultiplayerPage GamePage
 
   const backButtons = document.querySelectorAll(".backbutton");
   const startButtons = document.querySelectorAll(".startbutton");
@@ -44,9 +46,21 @@
   });
 })();
 
-//* GamePage
+//*SECTION MultiPlayer Page
+let mpStart = () => {
+  const startButton = document.getElementById("mpStart");
 
-const game = () => {
+  startButton.addEventListener("click", () => {
+    let xName = document.getElementById("player-x-name");
+    let oName = document.getElementById("player-o-name");
+    game(xName.value, oName.value);
+  });
+};
+
+//*SECTION GamePage
+
+const game = (playerx, playero) => {
+  const status = document.querySelector("h4");
   let playsquares = document.querySelectorAll(".playsquare");
   let sign = "X";
   let counter = 0;
@@ -88,7 +102,7 @@ const game = () => {
           (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
         ) {
           winner = sign;
-          endGame(winner);
+          endGame(winner, playerx, playero);
           playsquares.forEach(
             (square) => (square.style.pointerEvents = "none")
           );
@@ -102,12 +116,16 @@ const game = () => {
     );
   });
 };
-game();
-const endGame = (winner) => {
+const endGame = (winner, playerx, playero, status) => {
   const status = document.querySelector("h4");
-  winner === "X"
-    ? (status.innerText = `playerx is the winner`)
-    : winner === "O"
-    ? (status.innerText = `playero is the winner`)
-    : (status.innerText = `it's a draw`);
+
+  if (winner === "X") {
+    status.innerText = `${playerx} is the winner`;
+  } else if (winner === "O") {
+    status.innerText = `${playero} is the winner`;
+  } else {
+    status.innerText = `it's a draw`;
+  }
 };
+
+mpStart();
