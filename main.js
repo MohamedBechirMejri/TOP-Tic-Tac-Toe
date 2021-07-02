@@ -76,7 +76,7 @@ const game = (playerx, playero) => {
     8: 8,
     9: 9,
   };
-
+  status.innerText = `${playerx}'s turn...`;
   playsquares.forEach((square) => {
     square.replaceWith(square.cloneNode(true)); // fix duplicating events
   });
@@ -84,10 +84,16 @@ const game = (playerx, playero) => {
   playsquares.forEach((square) => {
     square.firstChild.innerText = "";
     square.style.pointerEvents = "";
+
     square.addEventListener(
       "click",
       () => {
         square.firstChild.innerText = sign;
+        if (status.innerText === `${playerx}'s turn...`) {
+          status.innerText = `${playero}'s turn...`;
+        } else {
+          status.innerText = `${playerx}'s turn...`;
+        }
         let id = square.getAttribute("id");
         pickOrder[id] = sign;
         ++counter;
@@ -102,7 +108,7 @@ const game = (playerx, playero) => {
           (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
         ) {
           winner = sign;
-          endGame(winner, playerx, playero);
+          endGame(winner, playerx, playero, status);
           playsquares.forEach(
             (square) => (square.style.pointerEvents = "none")
           );
@@ -110,15 +116,12 @@ const game = (playerx, playero) => {
           endGame(winner);
         }
         sign === "X" ? (sign = "O") : (sign = "X");
-        //TODO show which one's turn
       },
       { once: true }
     );
   });
 };
 const endGame = (winner, playerx, playero, status) => {
-  const status = document.querySelector("h4");
-
   if (winner === "X") {
     status.innerText = `${playerx} is the winner`;
   } else if (winner === "O") {
