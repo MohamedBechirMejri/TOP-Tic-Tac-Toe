@@ -49,6 +49,8 @@
 const game = () => {
   let playsquares = document.querySelectorAll(".playsquare");
   let sign = "X";
+  let counter = 0;
+  let winner = "D"; //draw
   let pickOrder = {
     1: 1,
     2: 2,
@@ -74,7 +76,7 @@ const game = () => {
         square.firstChild.innerText = sign;
         let id = square.getAttribute("id");
         pickOrder[id] = sign;
-
+        ++counter;
         if (
           (pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]) ||
           (pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]) ||
@@ -85,12 +87,12 @@ const game = () => {
           (pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]) ||
           (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
         ) {
-          console.log("yes");
+          winner = sign;
+          endGame(winner);
+        } else if (counter == 9) {
+          endGame(winner);
         }
-
         sign === "X" ? (sign = "O") : (sign = "X");
-
-        console.log(pickOrder);
         //TODO show which one's turn
       },
       { once: true }
@@ -98,3 +100,11 @@ const game = () => {
   });
 };
 game();
+const endGame = (winner) => {
+  const status = document.querySelector("h4");
+  winner === "X"
+    ? (status.innerText = `playerx is the winner`)
+    : winner === "O"
+    ? (status.innerText = `playero is the winner`)
+    : (status.innerText = `it's a draw`);
+};
