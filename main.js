@@ -114,12 +114,9 @@ const game = (playerx, playero) => {
           (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
         ) {
           winner = sign;
-          endGame(winner, playerx, playero, status);
-          playsquares.forEach(
-            (square) => (square.style.pointerEvents = "none")
-          );
+          endGame(winner, playerx, playero, status, playsquares);
         } else if (counter == 9) {
-          endGame(winner);
+          endGame(winner, playerx, playero, status, playsquares);
         }
         sign === "X" ? (sign = "O") : (sign = "X");
       },
@@ -127,7 +124,9 @@ const game = (playerx, playero) => {
     );
   });
 };
-const endGame = (winner, playerx, playero, status) => {
+const endGame = (winner, playerx, playero, status, playsquares) => {
+  playsquares.forEach((square) => (square.style.pointerEvents = "none"));
+
   if (winner === "X") {
     status.innerText = `${playerx} is the winner`;
   } else if (winner === "O") {
