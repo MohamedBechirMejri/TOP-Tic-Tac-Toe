@@ -49,11 +49,17 @@
 //*SECTION MultiPlayer Page
 let mpStart = () => {
   const startButton = document.getElementById("mpStart");
-
-  startButton.addEventListener("click", () => {
+  const restartButton = document.getElementById("restart-button");
+  const startGame = () => {
     let xName = document.getElementById("player-x-name");
     let oName = document.getElementById("player-o-name");
     game(xName.value, oName.value);
+  };
+  startButton.addEventListener("click", () => {
+    startGame();
+  });
+  restartButton.addEventListener("click", () => {
+    startGame();
   });
 };
 
