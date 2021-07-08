@@ -69,6 +69,8 @@ const game = (playerx, playero) => {
   const status = document.querySelector("h4");
   const xName = document.getElementById("xname");
   const oName = document.getElementById("oname");
+  const xScore = document.getElementById("xscore");
+  const oScore = document.getElementById("oscore");
   let playsquares = document.querySelectorAll(".playsquare");
   let sign = "X";
   let counter = 0;
@@ -87,7 +89,10 @@ const game = (playerx, playero) => {
   status.innerText = `${playerx}'s turn...`;
   xName.innerText = playerx;
   oName.innerText = playero;
-
+  if (xScore.innerText === "5" || oScore.innerText === "5") {
+    xScore.innerText = "0";
+    oScore.innerText = "0";
+  }
   playsquares.forEach((square) => {
     square.replaceWith(square.cloneNode(true)); // fix duplicating events
   });
@@ -119,9 +124,25 @@ const game = (playerx, playero) => {
           (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
         ) {
           winner = sign;
-          endGame(winner, playerx, playero, status, playsquares);
+          endGame(
+            winner,
+            playerx,
+            playero,
+            status,
+            playsquares,
+            xScore,
+            oScore
+          );
         } else if (counter == 9) {
-          endGame(winner, playerx, playero, status, playsquares);
+          endGame(
+            winner,
+            playerx,
+            playero,
+            status,
+            playsquares,
+            xScore,
+            oScore
+          );
         }
         sign === "X" ? (sign = "O") : (sign = "X");
       },
@@ -131,18 +152,27 @@ const game = (playerx, playero) => {
     );
   });
 };
-const endGame = (winner, playerx, playero, status, playsquares) => {
-  const xScore = document.getElementById("xscore");
-  const oScore = document.getElementById("oscore");
-
+const endGame = (
+  winner,
+  playerx,
+  playero,
+  status,
+  playsquares,
+  xScore,
+  oScore
+) => {
   playsquares.forEach((square) => (square.style.pointerEvents = "none"));
 
   if (winner === "X") {
     xScore.innerText++;
-    status.innerText = `${playerx} is the winner`;
+    xScore.innerText === "5"
+      ? (status.innerText = `Game Over, ${playerx} is the winner.`)
+      : (status.innerText = `${playerx} wins this round.`);
   } else if (winner === "O") {
     oScore.innerText++;
-    status.innerText = `${playero} is the winner`;
+    oScore.innerText === "5"
+      ? (status.innerText = `Game Over, ${playero} is the winner.`)
+      : (status.innerText = `${playero} wins this round.`);
   } else if (winner === "D") {
     status.innerText = `it's a draw`;
   }
