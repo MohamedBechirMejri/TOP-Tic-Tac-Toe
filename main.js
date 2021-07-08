@@ -14,6 +14,8 @@
   singleplayerButton.addEventListener("click", () => {
     startPage.classList.add("hidden");
     singleplayerPage.classList.remove("hidden");
+
+    spStart();
   });
 
   multiplayerButton.addEventListener("click", () => {
@@ -45,6 +47,26 @@
     });
   });
 })();
+//*SECTION SinglePlayer Page
+let spStart = () => {
+  const startButton = document.getElementById("spStart");
+  const restartButton = document.getElementById("restart-button");
+  const startGame = () => {
+    let xName = document.getElementById("spName");
+    let oName = "A.I";
+    game(xName.value, oName);
+  };
+  startButton.addEventListener("click", () => {
+    const xScore = document.getElementById("xscore");
+    const oScore = document.getElementById("oscore");
+    xScore.innerText = "0";
+    oScore.innerText = "0";
+    startGame();
+  });
+  restartButton.addEventListener("click", () => {
+    startGame();
+  });
+};
 
 //*SECTION MultiPlayer Page
 let mpStart = () => {
@@ -56,6 +78,10 @@ let mpStart = () => {
     game(xName.value, oName.value);
   };
   startButton.addEventListener("click", () => {
+    const xScore = document.getElementById("xscore");
+    const oScore = document.getElementById("oscore");
+    xScore.innerText = "0";
+    oScore.innerText = "0";
     startGame();
   });
   restartButton.addEventListener("click", () => {
@@ -177,5 +203,5 @@ const endGame = (
     status.innerText = `it's a draw`;
   }
 };
-
+spStart();
 mpStart();
