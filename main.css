@@ -1,216 +1,216 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 * {
-    font-family: "Fredoka One", cursive;
-    text-align: center;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background-color: #ff4b4a;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ff4b4a;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /** Start Page */
 
 #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin-top: 2em; */
-    margin: auto;
-    max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 2em; */
+  margin: auto;
+  max-width: 300px;
 }
 
 header {
-    font-size: 10em;
-    font-weight: bolder;
+  font-size: 10em;
+  font-weight: bolder;
 }
 
 #x {
-    color: #ffc927;
-    padding-left: 0.05em;
-    padding-right: 0.05em;
+  color: #ffc927;
+  padding-left: 0.05em;
+  padding-right: 0.05em;
 }
 
 #o {
-    color: #ffc927;
-    padding-left: 0.05em;
-    padding-right: 0.05em;
+  color: #ffc927;
+  padding-left: 0.05em;
+  padding-right: 0.05em;
 }
 
 #start-page {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
 }
 
 button {
-    padding: 1em;
-    background-color: #ffc927;
-    color: #ff4b4a;
-    border-style: hidden;
-    border-radius: 1.2em;
-    margin: 1em;
-    height: 5em;
-    width: 15em;
-    font-size: large;
+  padding: 1em;
+  background-color: #ffc927;
+  color: #ff4b4a;
+  border-style: hidden;
+  border-radius: 1.2em;
+  margin: 1em;
+  height: 5em;
+  width: 15em;
+  font-size: large;
 }
 
 /** SinglePlayer Page */
 #singleplayer-page,
 #multiplayer-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #nostart-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 70%;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
 }
 
 #nostart-logo {
-    font-size: 3em;
-    display: flex;
-    flex-direction: column;
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 #x {
-    background-color: #ffc927;
-    color: #ff4b4a;
-    border-radius: 0.12em;
-    padding-right: 0.4em;
-    padding-left: 0.4em;
+  background-color: #ffc927;
+  color: #ff4b4a;
+  border-radius: 0.12em;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
 }
 
 #o {
-    padding-right: 0.4em;
-    padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
 }
 
 h1 {
-    color: #ffc927;
+  color: #ffc927;
 }
 
 h2 {
-    color: #ffc927d5;
-    margin: 1.5em;
+  color: #ffc927d5;
+  margin: 1.5em;
 }
 
 input {
-    border-style: none;
-    border-radius: 0.4em;
-    background-color: #ffc9274b;
-    color: #ffc927d7;
-    font-size: x-large;
-    outline: none;
+  border-style: none;
+  border-radius: 0.4em;
+  background-color: #ffc9274b;
+  color: #ffc927d7;
+  font-size: x-large;
+  outline: none;
 }
 
 #diffs {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #diffs button,
 .navbutts button {
-    background-color: #ffc92750;
-    color: #ffc927;
-    margin: 0.5em;
-    height: 4em;
-    width: 11em;
+  background-color: #ffc92750;
+  color: #ffc927;
+  margin: 0.5em;
+  height: 4em;
+  width: 11em;
 }
 
 .navbutts {
-    display: flex;
-    width: 60%;
-    margin-top: 1em;
-    justify-content: center;
+  display: flex;
+  width: 60%;
+  margin-top: 1em;
+  justify-content: center;
 }
 
 .navbutts button {
-    background-color: #ffc927a9;
-    color: #ff4b4a;
+  background-color: #ffc927a9;
+  color: #ff4b4a;
 }
 
 /** Multiplayer Page */
 #multiplayer-page .navbutts {
-    margin-top: 4em;
+  margin-top: 4em;
 }
 
 #multiplayer-page h2 {
-    margin-top: 2em;
-    background-color: #ffc927a9;
-    color: #ff4b4a;
-    border-radius: 0.14em;
-    padding: 0.14em;
-    font-size: xx-large;
+  margin-top: 2em;
+  background-color: #ffc927a9;
+  color: #ff4b4a;
+  border-radius: 0.14em;
+  padding: 0.14em;
+  font-size: xx-large;
 }
 
 #multiplayer-page input {
-    width: 50%;
-    font-size: xx-large;
+  width: 50%;
+  font-size: xx-large;
 }
 
 /** Game Page */
 #game-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 #scoreboard {
-    background-color: #ffc927a9;
-    color: #ff4b4a;
-    border-radius: 0.5em;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-    margin: 0.5em;
-    margin-bottom: 1em;
+  background-color: #ffc927a9;
+  color: #ff4b4a;
+  border-radius: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin: 0.5em;
+  margin-bottom: 1em;
 }
 
 #playtable {
-    width: 95vw;
-    height: 50vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+  width: 95vw;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .playsquare {
-    background-color: #ffc927bb;
-    border-radius: 0.3em;
-    margin: 0.09em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #ffc927bb;
+  border-radius: 0.3em;
+  margin: 0.09em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h3 {
-    font-size: 3em;
-    margin: 0px;
-    -webkit-text-stroke-width: 0.05em;
-    -webkit-text-stroke-color: #ff4b4a;
+  font-size: 3em;
+  margin: 0px;
+  -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: #ff4b4a;
 }
 
 h4 {
-    color: #ffa731;
-    font-size: x-large;
-    margin: 0.65em;
+  color: #ffa731;
+  font-size: x-large;
+  margin: 0.65em;
 }
