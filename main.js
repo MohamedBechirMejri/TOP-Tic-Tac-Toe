@@ -93,13 +93,13 @@ const game = (playerx, playero) => {
   });
   playsquares = document.querySelectorAll(".playsquare");
   playsquares.forEach((square) => {
-    square.firstChild.innerText = "";
+    square.firstElementChild.innerText = "";
     square.style.pointerEvents = "";
 
     square.addEventListener(
       "click",
       () => {
-        square.firstChild.innerText = sign;
+        square.firstElementChild.innerText = sign;
         if (status.innerText === `${playerx}'s turn...`) {
           status.innerText = `${playero}'s turn...`;
         } else {
