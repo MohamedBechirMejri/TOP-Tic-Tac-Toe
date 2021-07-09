@@ -177,7 +177,7 @@ const game = (playerx, playero, difficulty) => {
         sign === "X" ? (sign = "O") : (sign = "X");
 
         if (difficulty === "easy" && sign === "O") {
-          easyAI(winner);
+          setTimeout(() => easyAI(winner), 600);
         }
       },
       {
