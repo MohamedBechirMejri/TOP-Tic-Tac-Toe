@@ -51,10 +51,12 @@
 let spStart = () => {
   const startButton = document.getElementById("spStart");
   const restartButton = document.getElementById("restart-button");
-  const startGame = () => {
+    const startGame = () => {
+      //TODO make diff butts functional
+    let difficulty = "easy";
     let xName = document.getElementById("spName");
     let oName = "A.I";
-    game(xName.value, oName);
+    game(xName.value, oName, difficulty);
   };
   startButton.addEventListener("click", () => {
     const xScore = document.getElementById("xscore");
@@ -91,7 +93,7 @@ let mpStart = () => {
 
 //*SECTION GamePage
 
-const game = (playerx, playero) => {
+const game = (playerx, playero, difficulty) => {
   const status = document.querySelector("h4");
   const xName = document.getElementById("xname");
   const oName = document.getElementById("oname");
