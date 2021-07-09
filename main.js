@@ -57,9 +57,7 @@ let spStart = () => {
 
   difficultyButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        difficulty = button.value;
-        console.log(difficulty);
-        console.log('difficulty');
+      difficulty = button.value; 
     });
   });
   const startGame = () => {
