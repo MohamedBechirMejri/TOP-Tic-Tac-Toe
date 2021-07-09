@@ -76,7 +76,7 @@ button {
   justify-content: center;
 }
 
-#nostart-header {
+.nostart-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -84,7 +84,7 @@ button {
   margin: auto;
 }
 
-#nostart-logo {
+.nostart-logo {
   font-size: 3em;
   display: flex;
   flex-direction: column;
