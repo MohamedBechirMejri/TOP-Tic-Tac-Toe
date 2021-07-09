@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   align-items: center;
   /* margin-top: 2em; */
-  margin: auto;
+  margin: auto 0;
   max-width: 500px;
 }
 
@@ -87,7 +87,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 70%;
+  width: 35%;
   margin: auto;
 }
 
@@ -110,6 +110,7 @@ button {
 
 h1 {
   color: #ffc927;
+  width: 1em;
 }
 
 h2 {
