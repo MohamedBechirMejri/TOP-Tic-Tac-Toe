@@ -236,6 +236,3 @@ const easyAI = (winner) => {
     }
   }
 };
-
-spStart();
-mpStart();
