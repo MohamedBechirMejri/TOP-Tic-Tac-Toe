@@ -4,6 +4,11 @@
   const singleplayerPage = document.getElementById("singleplayer-page");
   const multiplayerPage = document.getElementById("multiplayer-page");
   const gamePage = document.getElementById("game-page");
+
+  const header = document.getElementById("header");
+  const logo = document.getElementById("logo");
+  const title = document.getElementById("title");
+
   // TODO work on header
 
   //*SECTION Start Page
@@ -15,6 +20,7 @@
     startPage.classList.add("hidden");
     singleplayerPage.classList.remove("hidden");
 
+    title.classList.remove("hidden");
     spStart();
   });
 
@@ -22,6 +28,7 @@
     startPage.classList.add("hidden");
     multiplayerPage.classList.remove("hidden");
 
+    title.classList.remove("hidden");
     mpStart();
   });
 
@@ -35,7 +42,8 @@
       startPage.classList.remove("hidden");
       singleplayerPage.classList.add("hidden");
       multiplayerPage.classList.add("hidden");
-      gamePage.classList.add("hidden");
+        gamePage.classList.add("hidden");
+        title.classList.add("hidden");
     });
   });
 
