@@ -51,8 +51,8 @@
 let spStart = () => {
   const startButton = document.getElementById("spStart");
   const restartButton = document.getElementById("restart-button");
-    const startGame = () => {
-      //TODO make diff butts functional
+  const startGame = () => {
+    //TODO make diff butts functional
     let difficulty = "easy";
     let xName = document.getElementById("spName");
     let oName = "A.I";
@@ -122,6 +122,7 @@ const game = (playerx, playero, difficulty) => {
     oScore.innerText = "0";
   }
   playsquares.forEach((square) => {
+    square.classList.remove("clicked");
     square.replaceWith(square.cloneNode(true)); // fix duplicating events
   });
   playsquares = document.querySelectorAll(".playsquare");
@@ -133,7 +134,7 @@ const game = (playerx, playero, difficulty) => {
       "click",
       () => {
         square.firstElementChild.innerText = sign;
-
+        square.classList.add("clicked");
         status.innerText === `${playerx}'s turn...`
           ? (status.innerText = `${playero}'s turn...`)
           : (status.innerText = `${playerx}'s turn...`);
@@ -172,10 +173,11 @@ const game = (playerx, playero, difficulty) => {
             oScore
           );
         }
+
         sign === "X" ? (sign = "O") : (sign = "X");
 
         if (difficulty === "easy" && sign === "O") {
-          easyAI();
+          easyAI(winner);
         }
       },
       {
@@ -209,9 +211,21 @@ const endGame = (
     status.innerText = `it's a draw`;
   }
 };
-const easyAI = () => {
-  let id = Math.floor(Math.random() * 9) + 1;
-  document.getElementById(id).click();
+const easyAI = (winner) => {
+  if (winner === "X") {
+    return;
+  }
+  for (let i = 0; i < 1000; i++) {
+    let id = Math.floor(Math.random() * 9) + 1;
+    let square = document.getElementById(id);
+
+    if (square.className === "playsquare clicked") {
+      continue;
+    } else {
+      square.click();
+      return;
+    }
+  }
 };
 
 spStart();
