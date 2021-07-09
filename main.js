@@ -9,8 +9,6 @@
   const logo = document.getElementById("logo");
   const title = document.getElementById("title");
 
-  // TODO work on header
-
   //*SECTION Start Page
 
   const singleplayerButton = document.getElementById("singleplayer-button");
@@ -19,16 +17,18 @@
   singleplayerButton.addEventListener("click", () => {
     startPage.classList.add("hidden");
     singleplayerPage.classList.remove("hidden");
-
     title.classList.remove("hidden");
+    header.classList.add("nostart-header");
+    logo.classList.add("nostart-logo");
     spStart();
   });
 
   multiplayerButton.addEventListener("click", () => {
     startPage.classList.add("hidden");
     multiplayerPage.classList.remove("hidden");
-
     title.classList.remove("hidden");
+    header.classList.add("nostart-header");
+    logo.classList.add("nostart-logo");
     mpStart();
   });
 
@@ -42,8 +42,10 @@
       startPage.classList.remove("hidden");
       singleplayerPage.classList.add("hidden");
       multiplayerPage.classList.add("hidden");
-        gamePage.classList.add("hidden");
-        title.classList.add("hidden");
+      gamePage.classList.add("hidden");
+      title.classList.add("hidden");
+      header.classList.remove("nostart-header");
+      logo.classList.remove("nostart-logo");
     });
   });
 
