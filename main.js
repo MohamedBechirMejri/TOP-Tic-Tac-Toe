@@ -49,11 +49,20 @@
 })();
 //*SECTION SinglePlayer Page
 let spStart = () => {
+  const difficultyButtons = document.querySelectorAll("#diffs button");
   const startButton = document.getElementById("spStart");
   const restartButton = document.getElementById("restart-button");
+
+  let difficulty = "easy";
+
+  difficultyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        difficulty = button.value;
+        console.log(difficulty);
+        console.log('difficulty');
+    });
+  });
   const startGame = () => {
-    //TODO make diff butts functional
-    let difficulty = "easy";
     let xName = document.getElementById("spName");
     let oName = "A.I";
     game(xName.value, oName, difficulty);
