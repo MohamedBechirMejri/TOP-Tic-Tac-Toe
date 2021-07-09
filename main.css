@@ -31,12 +31,17 @@ body {
   align-items: center;
   /* margin-top: 2em; */
   margin: auto;
-  max-width: 300px;
+  max-width: 500px;
 }
 
 header {
-  font-size: 10em;
+  font-size: 7em;
   font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+
+
+  transition: all 5ms;
 }
 
 #x {
@@ -88,8 +93,6 @@ button {
 
 .nostart-logo {
   font-size: 3em;
-  display: flex;
-  flex-direction: column;
 }
 
 #x {
