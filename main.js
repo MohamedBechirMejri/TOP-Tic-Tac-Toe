@@ -131,11 +131,11 @@ const game = (playerx, playero) => {
       "click",
       () => {
         square.firstElementChild.innerText = sign;
-        if (status.innerText === `${playerx}'s turn...`) {
-          status.innerText = `${playero}'s turn...`;
-        } else {
-          status.innerText = `${playerx}'s turn...`;
-        }
+
+        status.innerText === `${playerx}'s turn...`
+          ? (status.innerText = `${playero}'s turn...`)
+          : (status.innerText = `${playerx}'s turn...`);
+
         let id = square.getAttribute("id");
         pickOrder[id] = sign;
         ++counter;
@@ -171,6 +171,10 @@ const game = (playerx, playero) => {
           );
         }
         sign === "X" ? (sign = "O") : (sign = "X");
+
+        if (difficulty === "easy" && sign === "O") {
+          easyAI();
+        }
       },
       {
         once: true,
@@ -203,5 +207,10 @@ const endGame = (
     status.innerText = `it's a draw`;
   }
 };
+const easyAI = () => {
+  let id = Math.floor(Math.random() * 9) + 1;
+  document.getElementById(id).click();
+};
+
 spStart();
 mpStart();
