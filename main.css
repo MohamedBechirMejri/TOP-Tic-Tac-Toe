@@ -58,7 +58,6 @@ header {
 #start-page {
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
 }
 
 button {
@@ -154,9 +153,6 @@ input {
 }
 
 /** Multiplayer Page */
-#multiplayer-page .navbutts {
-  margin-top: 4em;
-}
 
 #multiplayer-page h2 {
   /* margin-top: 2em;*/
@@ -195,8 +191,8 @@ input {
 }
 
 #playtable {
-  width: 20em;
-  height: 20em;
+  width: 18em;
+  height: 18em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
