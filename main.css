@@ -115,7 +115,7 @@ h1 {
 
 h2 {
   color: #ffc927d5;
-/*  margin: 1.5em;*/
+  /*  margin: 1.5em;*/
 }
 
 input {
@@ -159,7 +159,7 @@ input {
 }
 
 #multiplayer-page h2 {
- /* margin-top: 2em;*/
+  /* margin-top: 2em;*/
   background-color: #ffc927a9;
   color: #ff4b4a;
   border-radius: 0.14em;
@@ -190,6 +190,9 @@ input {
   margin: 0.5em;
   margin-bottom: 1em;
 }
+#scoreboard p {
+  margin: 0.5em;
+}
 
 #playtable {
   width: 20em;
@@ -219,6 +222,15 @@ h4 {
   color: #ffa731;
   font-size: x-large;
   margin: 0.65em;
+}
+
+#gamepagebutts {
+  margin: 0;
+}
+#gamepagebutts button {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /**SECTION  UX & Animations */
