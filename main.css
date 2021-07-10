@@ -8,7 +8,7 @@
 }
 
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: 100vw;
   height: 100vh;
@@ -39,7 +39,6 @@ header {
   font-weight: bolder;
   display: flex;
   flex-direction: column;
-
 
   transition: all 5ms;
 }
@@ -89,6 +88,7 @@ button {
   justify-content: space-evenly;
   width: 35%;
   margin: auto;
+  font-size: small;
 }
 
 .nostart-logo {
@@ -115,7 +115,7 @@ h1 {
 
 h2 {
   color: #ffc927d5;
-  margin: 1.5em;
+/*  margin: 1.5em;*/
 }
 
 input {
@@ -159,7 +159,7 @@ input {
 }
 
 #multiplayer-page h2 {
-  margin-top: 2em;
+ /* margin-top: 2em;*/
   background-color: #ffc927a9;
   color: #ff4b4a;
   border-radius: 0.14em;
