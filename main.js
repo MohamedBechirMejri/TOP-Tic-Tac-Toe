@@ -1,12 +1,5 @@
 //SECTION navigation
 
-if (
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
-) {
-  document.documentElement.requestFullscreen();
-}
 (() => {
   const startPage = document.getElementById("start-page");
   const singleplayerPage = document.getElementById("singleplayer-page");
