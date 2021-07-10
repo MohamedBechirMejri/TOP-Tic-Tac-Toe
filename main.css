@@ -192,8 +192,8 @@ input {
 }
 
 #playtable {
-  width: 95vw;
-  height: 50vh;
+  width: 20em;
+  height: 20em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
