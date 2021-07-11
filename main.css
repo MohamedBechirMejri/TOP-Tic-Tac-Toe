@@ -44,13 +44,13 @@ header {
 }
 
 #x {
-  color: #ffc927;
+  color: aliceblue;
   padding-left: 0.05em;
   padding-right: 0.05em;
 }
 
 #o {
-  color: #ffc927;
+  color: aliceblue;
   padding-left: 0.05em;
   padding-right: 0.05em;
 }
@@ -62,7 +62,7 @@ header {
 
 button {
   padding: 1em;
-  background-color: #ffc927;
+  background-color: aliceblue;
   color: #ff4b4a;
   border-style: hidden;
   border-radius: 1.2em;
@@ -70,6 +70,8 @@ button {
   height: 5em;
   width: 15em;
   font-size: large;
+
+  transition: all 300ms;
 }
 
 /** SinglePlayer Page */
@@ -97,7 +99,7 @@ button {
 }
 
 #x {
-  background-color: #ffc927;
+  background-color: aliceblue;
   color: #ff4b4a;
   border-radius: 0.12em;
   padding-right: 0.4em;
@@ -113,20 +115,20 @@ button {
 }
 
 h1 {
-  color: #ffc927;
+  color: aliceblue;
   width: 1em;
 }
 
 h2 {
-  color: #ffc927d5;
+  color: aliceblue;
   /*  margin: 1.5em;*/
 }
 
 input {
   border-style: none;
   border-radius: 0.4em;
-  background-color: #ffc9274b;
-  color: #ffc927d7;
+  background-color: #f0f8ff63;
+  color: aliceblue;
   font-size: x-large;
   outline: none;
 }
@@ -138,8 +140,8 @@ input {
 
 #diffs button,
 .navbutts button {
-  background-color: #ffc92750;
-  color: #ffc927;
+  background-color: aliceblue;
+  color: aliceblue;
   margin: 0.5em;
   height: 4em;
   width: 11em;
@@ -153,7 +155,7 @@ input {
 }
 
 .navbutts button {
-  background-color: #ffc927a9;
+  background-color: aliceblue;
   color: #ff4b4a;
 }
 
@@ -161,7 +163,7 @@ input {
 
 #multiplayer-page h2 {
   /* margin-top: 2em;*/
-  background-color: #ffc927a9;
+  background-color: #f0f8ffe6;
   color: #ff4b4a;
   border-radius: 0.14em;
   padding: 0.14em;
@@ -183,7 +185,7 @@ input {
 }
 
 #scoreboard {
-  background-color: #ffc927a9;
+  background-color: aliceblue;
   color: #ff4b4a;
   border-radius: 0.5em;
   padding-right: 0.5em;
@@ -204,7 +206,7 @@ input {
 }
 
 .playsquare {
-  background-color: #ffc927bb;
+  background-color: aliceblue;
   border-radius: 0.3em;
   margin: 0.09em;
   display: flex;
@@ -216,11 +218,13 @@ h3 {
   font-size: 3em;
   margin: 0px;
   -webkit-text-stroke-width: 0.05em;
+  -webkit-text-stroke-color: black;
+}
+.win h3 {
   -webkit-text-stroke-color: #ff4b4a;
 }
-
 h4 {
-  color: #ffa731;
+  color: aliceblue;
   font-size: x-large;
   margin: 0.65em;
 }
@@ -239,15 +243,17 @@ h4 {
 #start-page button:hover {
   border-style: solid;
   border-width: 0.5em;
-  border-color: #e6ae00;
-  background-color: #ffc927;
+  border-color: #bfbfbf78;
+  background-color: aliceblue;
+  text-shadow: 0 0 2px;
+
   color: #ff4b4a;
 }
 button:hover {
-  background-color: #ff703f;
-  color: #ffc927;
+  background-color: #f98e90;
+  color: aliceblue;
 }
 
 .win {
-    color: aliceblue;
+  color: aliceblue;
 }
