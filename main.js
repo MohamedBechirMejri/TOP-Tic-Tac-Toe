@@ -211,6 +211,15 @@ const endGame = (
   oScore,
   pickOrder
 ) => {
+  //    document.getElementById("scoreboard").style.backgroundColor = "#0088ff";
+  document.getElementById("scoreboard").style.backgroundColor = "#ff4b4a";
+  // document.getElementById("scoreboard").style.color = "#f0f8ff";
+
+  setTimeout(() => {
+    document.getElementById("scoreboard").style.backgroundColor = "aliceblue";
+    //    document.getElementById("scoreboard").style.color = "#ff4b4a";
+  }, 900);
+
   playsquares.forEach((square) => (square.style.pointerEvents = "none"));
   switch (true) {
     case pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]:
@@ -275,12 +284,17 @@ const endGame = (
   }
 
   if (winner === "X") {
-    xScore.innerText++;
+    setTimeout(() => {
+      xScore.innerText++;
+    }, 300);
     xScore.innerText === "5"
       ? (status.innerText = `Game Over, ${playerx} is the winner.`)
       : (status.innerText = `${playerx} wins this round.`);
   } else if (winner === "O") {
-    oScore.innerText++;
+    setTimeout(() => {
+      oScore.innerText++;
+    }, 300);
+
     oScore.innerText === "5"
       ? (status.innerText = `Game Over, ${playero} is the winner.`)
       : (status.innerText = `${playero} wins this round.`);
