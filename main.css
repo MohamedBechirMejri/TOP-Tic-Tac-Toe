@@ -1,259 +1,264 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 * {
-  font-family: "Fredoka One", cursive;
-  text-align: center;
+    font-family: "Fredoka One", cursive;
+    text-align: center;
 
-  transition: all 300ms;
+    transition: all 300ms;
 }
 
 body {
-  margin: auto;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  background-color: #ff4b4a;
+    margin: auto;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ff4b4a;
 }
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 /** Start Page */
 
 #container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin-top: 2em; */
-  margin: auto 0;
-  max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 2em; */
+    margin: auto 0;
+    max-width: 500px;
 }
 
 header {
-  font-size: 7em;
-  font-weight: bolder;
-  display: flex;
-  flex-direction: column;
+    font-size: 7em;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
 
-  transition: all 5ms;
+    transition: all 5ms;
 }
 
 #x {
-  color: aliceblue;
-  padding-left: 0.05em;
-  padding-right: 0.05em;
+    color: aliceblue;
+    padding-left: 0.05em;
+    padding-right: 0.05em;
 }
 
 #o {
-  color: aliceblue;
-  padding-left: 0.05em;
-  padding-right: 0.05em;
+    color: aliceblue;
+    padding-left: 0.05em;
+    padding-right: 0.05em;
 }
 
 #start-page {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
-  padding: 1em;
-  background-color: aliceblue;
-  color: #ff4b4a;
-  border-style: hidden;
-  border-radius: 1.2em;
-  margin: 1em;
-  height: 5em;
-  width: 15em;
-  font-size: large;
+    padding: 1em;
+    background-color: aliceblue;
+    color: #ff4b4a;
+    border-style: hidden;
+    border-radius: 1.2em;
+    margin: 1em;
+    height: 5em;
+    width: 15em;
+    font-size: large;
 
-  transition: all 300ms;
+    transition: all 300ms;
 }
 
 /** SinglePlayer Page */
 #singleplayer-page,
 #multiplayer-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nostart-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 35%;
-  margin: auto;
-  font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35%;
+    margin: auto;
+    font-size: small;
 }
 
 .nostart-logo {
-  font-size: 3em;
+    font-size: 3em;
 
-  transition: none;
+    transition: none;
 }
 
 #x {
-  background-color: aliceblue;
-  color: #ff4b4a;
-  border-radius: 0.12em;
-  padding-right: 0.4em;
-  padding-left: 0.4em;
-  transition: none;
+    background-color: aliceblue;
+    color: #ff4b4a;
+    border-radius: 0.12em;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    transition: none;
 }
 
 #o {
-  padding-right: 0.4em;
-  padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
 
-  transition: none;
+    transition: none;
 }
 
 h1 {
-  color: aliceblue;
-  width: 1em;
+    color: aliceblue;
+    width: 1em;
 }
 
 h2 {
-  color: aliceblue;
-  /*  margin: 1.5em;*/
+    color: aliceblue;
+    /*  margin: 1.5em;*/
 }
 
 input {
-  border-style: none;
-  border-radius: 0.4em;
-  background-color: #f0f8ff63;
-  color: aliceblue;
-  font-size: x-large;
-  outline: none;
+    border-style: none;
+    border-radius: 0.4em;
+    background-color: #f0f8ff63;
+    color: aliceblue;
+    font-size: x-large;
+    outline: none;
 }
 
 #diffs {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #diffs button,
 .navbutts button {
-  background-color: aliceblue;
-  color: aliceblue;
-  margin: 0.5em;
-  height: 4em;
-  width: 11em;
+    background-color: aliceblue;
+    color: aliceblue;
+    margin: 0.5em;
+    height: 4em;
+    width: 11em;
 }
 
 .navbutts {
-  display: flex;
-  width: 60%;
-  margin-top: 1em;
-  justify-content: center;
+    display: flex;
+    width: 60%;
+    margin-top: 1em;
+    justify-content: center;
 }
 
 .navbutts button {
-  background-color: aliceblue;
-  color: #ff4b4a;
+    background-color: aliceblue;
+    color: #ff4b4a;
 }
 
 /** Multiplayer Page */
 
 #multiplayer-page h2 {
-  /* margin-top: 2em;*/
-  background-color: #f0f8ffe6;
-  color: #ff4b4a;
-  border-radius: 0.14em;
-  padding: 0.14em;
-  font-size: xx-large;
+    /* margin-top: 2em;*/
+    background-color: #f0f8ffe6;
+    color: #ff4b4a;
+    border-radius: 0.14em;
+    padding: 0.14em;
+    font-size: xx-large;
 }
 
 #multiplayer-page input {
-  width: 50%;
-  font-size: xx-large;
+    width: 50%;
+    font-size: xx-large;
 }
 
 /** Game Page */
 #game-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 #scoreboard {
-  background-color: aliceblue;
-  color: #ff4b4a;
-  border-radius: 0.5em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  margin: 0.5em;
-  margin-bottom: 1em;
+    background-color: aliceblue;
+    color: #ff4b4a;
+    border-radius: 0.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    margin: 0.5em;
+    margin-bottom: 1em;
 }
+
 #scoreboard p {
-  margin: 0.5em;
+    margin: 0.5em;
 }
 
 #playtable {
-  width: 18em;
-  height: 18em;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+    width: 18em;
+    height: 18em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .playsquare {
-  background-color: aliceblue;
-  border-radius: 0.3em;
-  margin: 0.09em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: aliceblue;
+    border-radius: 0.3em;
+    margin: 0.09em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
-  font-size: 3em;
-  margin: 0px;
-  -webkit-text-stroke-width: 0.05em;
-  -webkit-text-stroke-color: black;
+    font-size: 3em;
+    margin: 0px;
+    -webkit-text-stroke-width: 0.05em;
+    -webkit-text-stroke-color: black;
 }
+
 .win h3 {
-  -webkit-text-stroke-color: #ff4b4a;
+    -webkit-text-stroke-color: #ff4b4a;
 }
+
 h4 {
-  color: aliceblue;
-  font-size: x-large;
-  margin: 0.65em;
+    color: aliceblue;
+    font-size: x-large;
+    margin: 0.65em;
 }
 
 #gamepagebutts {
-  margin: 0;
+    margin: 0;
 }
+
 #gamepagebutts button {
-  font-size: 0.9em;
-  margin-top: 0;
-  margin-bottom: 0;
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /**SECTION  UX & Animations */
 
 #start-page button:hover {
-  border-style: solid;
-  border-width: 0.5em;
-  border-color: #bfbfbf78;
-  background-color: aliceblue;
-  text-shadow: 0 0 2px;
+    border-style: solid;
+    border-width: 0.5em;
+    border-color: #bfbfbf78;
+    background-color: aliceblue;
+    text-shadow: 0 0 2px;
 
-  color: #ff4b4a;
+    color: #ff4b4a;
 }
+
 button:hover {
-  background-color: #f98e90;
-  color: aliceblue;
+    background-color: #f98e90;
+    color: aliceblue;
 }
 
 .win {
-  color: aliceblue;
+    color: aliceblue;
 }

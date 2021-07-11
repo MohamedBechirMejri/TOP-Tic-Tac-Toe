@@ -1,320 +1,311 @@
 //SECTION navigation
 
 (() => {
-  const startPage = document.getElementById("start-page");
-  const singleplayerPage = document.getElementById("singleplayer-page");
-  const multiplayerPage = document.getElementById("multiplayer-page");
-  const gamePage = document.getElementById("game-page");
+    const startPage = document.getElementById("start-page");
+    const singleplayerPage = document.getElementById("singleplayer-page");
+    const multiplayerPage = document.getElementById("multiplayer-page");
+    const gamePage = document.getElementById("game-page");
 
-  const header = document.getElementById("header");
-  const logo = document.getElementById("logo");
-  const title = document.getElementById("title");
+    const header = document.getElementById("header");
+    const logo = document.getElementById("logo");
+    const title = document.getElementById("title");
 
-  //*SECTION Start Page
+    //*SECTION Start Page
 
-  const singleplayerButton = document.getElementById("singleplayer-button");
-  const multiplayerButton = document.getElementById("multiplayer-button");
+    const singleplayerButton = document.getElementById("singleplayer-button");
+    const multiplayerButton = document.getElementById("multiplayer-button");
 
-  singleplayerButton.addEventListener("click", () => {
-    startPage.classList.add("hidden");
-    singleplayerPage.classList.remove("hidden");
-    title.classList.remove("hidden");
-    header.classList.add("nostart-header");
-    logo.classList.add("nostart-logo");
-    spStart();
-  });
-
-  multiplayerButton.addEventListener("click", () => {
-    startPage.classList.add("hidden");
-    multiplayerPage.classList.remove("hidden");
-    title.classList.remove("hidden");
-    header.classList.add("nostart-header");
-    logo.classList.add("nostart-logo");
-    mpStart();
-  });
-
-  //*SECTION SingleplayerPage MultiplayerPage GamePage
-
-  const backButtons = document.querySelectorAll(".backbutton");
-  const startButtons = document.querySelectorAll(".startbutton");
-
-  backButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      startPage.classList.remove("hidden");
-      singleplayerPage.classList.add("hidden");
-      multiplayerPage.classList.add("hidden");
-      gamePage.classList.add("hidden");
-      title.classList.add("hidden");
-      header.classList.remove("nostart-header");
-      logo.classList.remove("nostart-logo");
+    singleplayerButton.addEventListener("click", () => {
+        startPage.classList.add("hidden");
+        singleplayerPage.classList.remove("hidden");
+        title.classList.remove("hidden");
+        header.classList.add("nostart-header");
+        logo.classList.add("nostart-logo");
+        spStart();
     });
-  });
 
-  startButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      singleplayerPage.classList.add("hidden");
-      multiplayerPage.classList.add("hidden");
-      gamePage.classList.remove("hidden");
+    multiplayerButton.addEventListener("click", () => {
+        startPage.classList.add("hidden");
+        multiplayerPage.classList.remove("hidden");
+        title.classList.remove("hidden");
+        header.classList.add("nostart-header");
+        logo.classList.add("nostart-logo");
+        mpStart();
     });
-  });
+
+    //*SECTION SingleplayerPage MultiplayerPage GamePage
+
+    const backButtons = document.querySelectorAll(".backbutton");
+    const startButtons = document.querySelectorAll(".startbutton");
+
+    backButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            startPage.classList.remove("hidden");
+            singleplayerPage.classList.add("hidden");
+            multiplayerPage.classList.add("hidden");
+            gamePage.classList.add("hidden");
+            title.classList.add("hidden");
+            header.classList.remove("nostart-header");
+            logo.classList.remove("nostart-logo");
+        });
+    });
+
+    startButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            singleplayerPage.classList.add("hidden");
+            multiplayerPage.classList.add("hidden");
+            gamePage.classList.remove("hidden");
+        });
+    });
 })();
 //*SECTION SinglePlayer Page
 let spStart = () => {
-  const startButton = document.getElementById("spStart");
-  const restartButton = document.getElementById("restart-button");
+    const startButton = document.getElementById("spStart");
+    const restartButton = document.getElementById("restart-button");
 
-  let difficulty = "easy";
+    let difficulty = "easy";
 
-  const startGame = () => {
-    let xName = document.getElementById("spName");
-    let oName = "A.I";
-    game(xName.value, oName, difficulty);
-  };
-  startButton.addEventListener("click", () => {
-    const xScore = document.getElementById("xscore");
-    const oScore = document.getElementById("oscore");
-    xScore.innerText = "0";
-    oScore.innerText = "0";
-    startGame();
-  });
-  restartButton.addEventListener("click", () => {
-    startGame();
-  });
+    const startGame = () => {
+        let xName = document.getElementById("spName");
+        let oName = "A.I";
+        game(xName.value, oName, difficulty);
+    };
+    startButton.addEventListener("click", () => {
+        const xScore = document.getElementById("xscore");
+        const oScore = document.getElementById("oscore");
+        xScore.innerText = "0";
+        oScore.innerText = "0";
+        startGame();
+    });
+    restartButton.addEventListener("click", () => {
+        startGame();
+    });
 };
 
 //*SECTION MultiPlayer Page
 let mpStart = () => {
-  const startButton = document.getElementById("mpStart");
-  const restartButton = document.getElementById("restart-button");
-  const startGame = () => {
-    let xName = document.getElementById("player-x-name");
-    let oName = document.getElementById("player-o-name");
-    game(xName.value, oName.value);
-  };
-  startButton.addEventListener("click", () => {
-    const xScore = document.getElementById("xscore");
-    const oScore = document.getElementById("oscore");
-    xScore.innerText = "0";
-    oScore.innerText = "0";
-    startGame();
-  });
-  restartButton.addEventListener("click", () => {
-    startGame();
-  });
+    const startButton = document.getElementById("mpStart");
+    const restartButton = document.getElementById("restart-button");
+    const startGame = () => {
+        let xName = document.getElementById("player-x-name");
+        let oName = document.getElementById("player-o-name");
+        game(xName.value, oName.value);
+    };
+    startButton.addEventListener("click", () => {
+        const xScore = document.getElementById("xscore");
+        const oScore = document.getElementById("oscore");
+        xScore.innerText = "0";
+        oScore.innerText = "0";
+        startGame();
+    });
+    restartButton.addEventListener("click", () => {
+        startGame();
+    });
 };
 
 //*SECTION GamePage
 
 const game = (playerx, playero, difficulty) => {
-  const status = document.querySelector("h4");
-  const xName = document.getElementById("xname");
-  const oName = document.getElementById("oname");
-  const xScore = document.getElementById("xscore");
-  const oScore = document.getElementById("oscore");
-  let playsquares = document.querySelectorAll(".playsquare");
-  let sign = "X";
-  let counter = 0;
-  let winner = "D"; //draw
-  let pickOrder = {
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-  };
-  status.innerText = `${playerx}'s turn...`;
-  xName.innerText = playerx;
-  oName.innerText = playero;
-  if (xScore.innerText === "5" || oScore.innerText === "5") {
-    xScore.innerText = "0";
-    oScore.innerText = "0";
-  }
-  playsquares.forEach((square) => {
-    square.classList.remove("clicked");
-    square.classList.remove("win");
-    square.replaceWith(square.cloneNode(true)); // fix duplicating events
-  });
-  playsquares = document.querySelectorAll(".playsquare");
-  playsquares.forEach((square) => {
-    square.firstElementChild.innerText = "";
-    square.style.pointerEvents = "";
+    const status = document.querySelector("h4");
+    const xName = document.getElementById("xname");
+    const oName = document.getElementById("oname");
+    const xScore = document.getElementById("xscore");
+    const oScore = document.getElementById("oscore");
+    let playsquares = document.querySelectorAll(".playsquare");
+    let sign = "X";
+    let counter = 0;
+    let winner = "D"; //draw
+    let pickOrder = {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+    };
+    status.innerText = `${playerx}'s turn...`;
+    xName.innerText = playerx;
+    oName.innerText = playero;
+    if (xScore.innerText === "5" || oScore.innerText === "5") {
+        xScore.innerText = "0";
+        oScore.innerText = "0";
+    }
+    playsquares.forEach((square) => {
+        square.classList.remove("clicked");
+        square.classList.remove("win");
+        square.replaceWith(square.cloneNode(true)); // fix duplicating events
+    });
+    playsquares = document.querySelectorAll(".playsquare");
+    playsquares.forEach((square) => {
+        square.firstElementChild.innerText = "";
+        square.style.pointerEvents = "";
 
-    square.addEventListener(
-      "click",
-      () => {
-        square.firstElementChild.innerText = sign;
-        square.classList.add("clicked");
-        status.innerText === `${playerx}'s turn...`
-          ? (status.innerText = `${playero}'s turn...`)
-          : (status.innerText = `${playerx}'s turn...`);
+        square.addEventListener(
+            "click",
+            () => {
+                square.firstElementChild.innerText = sign;
+                square.classList.add("clicked");
+                status.innerText === `${playerx}'s turn...` ?
+                    (status.innerText = `${playero}'s turn...`) :
+                    (status.innerText = `${playerx}'s turn...`);
 
-        let id = square.getAttribute("id");
-        pickOrder[id] = sign;
-        ++counter;
-        if (
-          (pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]) ||
-          (pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]) ||
-          (pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]) ||
-          (pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]) ||
-          (pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]) ||
-          (pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]) ||
-          (pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]) ||
-          (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
-        ) {
-          winner = sign;
-          endGame(
-            winner,
-            playerx,
-            playero,
-            status,
-            playsquares,
-            xScore,
-            oScore,
-            pickOrder
-          );
-        } else if (counter == 9) {
-          endGame(
-            winner,
-            playerx,
-            playero,
-            status,
-            playsquares,
-            xScore,
-            oScore,
-            pickOrder
-          );
-        }
+                let id = square.getAttribute("id");
+                pickOrder[id] = sign;
+                ++counter;
+                if (
+                    (pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]) ||
+                    (pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]) ||
+                    (pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]) ||
+                    (pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]) ||
+                    (pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]) ||
+                    (pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]) ||
+                    (pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]) ||
+                    (pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7])
+                ) {
+                    winner = sign;
+                    endGame(
+                        winner,
+                        playerx,
+                        playero,
+                        status,
+                        playsquares,
+                        xScore,
+                        oScore,
+                        pickOrder
+                    );
+                } else if (counter == 9) {
+                    endGame(
+                        winner,
+                        playerx,
+                        playero,
+                        status,
+                        playsquares,
+                        xScore,
+                        oScore,
+                        pickOrder
+                    );
+                }
 
-        sign === "X" ? (sign = "O") : (sign = "X");
+                sign === "X" ? (sign = "O") : (sign = "X");
 
-        if (difficulty === "easy" && sign === "O") {
-          setTimeout(() => easyAI(winner), 600);
-        }
-      },
-      {
-        once: true,
-      }
-    );
-  });
+                if (difficulty === "easy" && sign === "O") {
+                    setTimeout(() => easyAI(winner), 600);
+                }
+            }, {
+                once: true,
+            }
+        );
+    });
 };
 const endGame = (
-  winner,
-  playerx,
-  playero,
-  status,
-  playsquares,
-  xScore,
-  oScore,
-  pickOrder
+    winner,
+    playerx,
+    playero,
+    status,
+    playsquares,
+    xScore,
+    oScore,
+    pickOrder
 ) => {
-  //    document.getElementById("scoreboard").style.backgroundColor = "#0088ff";
-  document.getElementById("scoreboard").style.backgroundColor = "#ff4b4a";
-  // document.getElementById("scoreboard").style.color = "#f0f8ff";
+    //    document.getElementById("scoreboard").style.backgroundColor = "#0088ff";
+    document.getElementById("scoreboard").style.backgroundColor = "#ff4b4a";
+    // document.getElementById("scoreboard").style.color = "#f0f8ff";
 
-  setTimeout(() => {
-    document.getElementById("scoreboard").style.backgroundColor = "aliceblue";
-    //    document.getElementById("scoreboard").style.color = "#ff4b4a";
-  }, 900);
+    setTimeout(() => {
+        document.getElementById("scoreboard").style.backgroundColor = "aliceblue";
+        //    document.getElementById("scoreboard").style.color = "#ff4b4a";
+    }, 900);
 
-  playsquares.forEach((square) => (square.style.pointerEvents = "none"));
-  switch (true) {
-    case pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]:
-      {
-        document.getElementById("1").classList.add("win");
-        document.getElementById("2").classList.add("win");
-        document.getElementById("3").classList.add("win");
-      }
-      break;
-    case pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]:
-      {
+    playsquares.forEach((square) => (square.style.pointerEvents = "none"));
+    switch (true) {
+        case pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]: {
+            document.getElementById("1").classList.add("win");
+            document.getElementById("2").classList.add("win");
+            document.getElementById("3").classList.add("win");
+        }
+        break;
+    case pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]: {
         document.getElementById("4").classList.add("win");
         document.getElementById("5").classList.add("win");
         document.getElementById("6").classList.add("win");
-      }
-      break;
-    case pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]:
-      {
+    }
+    break;
+    case pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]: {
         document.getElementById("7").classList.add("win");
         document.getElementById("8").classList.add("win");
         document.getElementById("9").classList.add("win");
-      }
-      break;
-    case pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]:
-      {
+    }
+    break;
+    case pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]: {
         document.getElementById("1").classList.add("win");
         document.getElementById("4").classList.add("win");
         document.getElementById("7").classList.add("win");
-      }
-      break;
-    case pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]:
-      {
+    }
+    break;
+    case pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]: {
         document.getElementById("2").classList.add("win");
         document.getElementById("5").classList.add("win");
         document.getElementById("8").classList.add("win");
-      }
-      break;
-    case pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]:
-      {
+    }
+    break;
+    case pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]: {
         document.getElementById("3").classList.add("win");
         document.getElementById("6").classList.add("win");
         document.getElementById("9").classList.add("win");
-      }
-      break;
-    case pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]:
-      {
+    }
+    break;
+    case pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]: {
         document.getElementById("1").classList.add("win");
         document.getElementById("5").classList.add("win");
         document.getElementById("9").classList.add("win");
-      }
-      break;
-    case pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7]:
-      {
+    }
+    break;
+    case pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7]: {
         document.getElementById("3").classList.add("win");
         document.getElementById("5").classList.add("win");
         document.getElementById("7").classList.add("win");
-      }
-      break;
+    }
+    break;
 
     default:
-      break;
-  }
+        break;
+    }
 
-  if (winner === "X") {
-    setTimeout(() => {
-      xScore.innerText++;
-    }, 300);
-    xScore.innerText === "5"
-      ? (status.innerText = `Game Over, ${playerx} is the winner.`)
-      : (status.innerText = `${playerx} wins this round.`);
-  } else if (winner === "O") {
-    setTimeout(() => {
-      oScore.innerText++;
-    }, 300);
+    if (winner === "X") {
+        setTimeout(() => {
+            xScore.innerText++;
+        }, 300);
+        xScore.innerText === "5" ?
+            (status.innerText = `Game Over, ${playerx} is the winner.`) :
+            (status.innerText = `${playerx} wins this round.`);
+    } else if (winner === "O") {
+        setTimeout(() => {
+            oScore.innerText++;
+        }, 300);
 
-    oScore.innerText === "5"
-      ? (status.innerText = `Game Over, ${playero} is the winner.`)
-      : (status.innerText = `${playero} wins this round.`);
-  } else if (winner === "D") {
-    status.innerText = `it's a draw`;
-  }
+        oScore.innerText === "5" ?
+            (status.innerText = `Game Over, ${playero} is the winner.`) :
+            (status.innerText = `${playero} wins this round.`);
+    } else if (winner === "D") {
+        status.innerText = `it's a draw`;
+    }
 };
 const easyAI = (winner) => {
-  if (winner === "X") {
-    return;
-  }
-  for (let i = 0; i < 1000; i++) {
-    let id = Math.floor(Math.random() * 9) + 1;
-    let square = document.getElementById(id);
-
-    if (square.className === "playsquare clicked") {
-      continue;
-    } else {
-      square.click();
-      return;
+    if (winner === "X") {
+        return;
     }
-  }
+    for (let i = 0; i < 1000; i++) {
+        let id = Math.floor(Math.random() * 9) + 1;
+        let square = document.getElementById(id);
+
+        if (square.className === "playsquare clicked") {
+            continue;
+        } else {
+            square.click();
+            return;
+        }
+    }
 };
