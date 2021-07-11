@@ -135,6 +135,7 @@ const game = (playerx, playero, difficulty) => {
   }
   playsquares.forEach((square) => {
     square.classList.remove("clicked");
+    square.classList.remove("win");
     square.replaceWith(square.cloneNode(true)); // fix duplicating events
   });
   playsquares = document.querySelectorAll(".playsquare");
