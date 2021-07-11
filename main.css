@@ -93,7 +93,7 @@ button {
 .nostart-logo {
   font-size: 3em;
 
- transition: none;
+  transition: none;
 }
 
 #x {
@@ -102,21 +102,19 @@ button {
   border-radius: 0.12em;
   padding-right: 0.4em;
   padding-left: 0.4em;
-   transition: none;
+  transition: none;
 }
 
 #o {
   padding-right: 0.4em;
   padding-left: 0.4em;
 
-   transition: none;
+  transition: none;
 }
 
 h1 {
   color: #ffc927;
   width: 1em;
-
-
 }
 
 h2 {
@@ -248,4 +246,8 @@ h4 {
 button:hover {
   background-color: #ff703f;
   color: #ffc927;
+}
+
+.win {
+    color: aliceblue;
 }

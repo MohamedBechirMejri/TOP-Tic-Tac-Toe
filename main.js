@@ -172,7 +172,8 @@ const game = (playerx, playero, difficulty) => {
             status,
             playsquares,
             xScore,
-            oScore
+            oScore,
+            pickOrder
           );
         } else if (counter == 9) {
           endGame(
@@ -182,7 +183,8 @@ const game = (playerx, playero, difficulty) => {
             status,
             playsquares,
             xScore,
-            oScore
+            oScore,
+            pickOrder
           );
         }
 
@@ -205,9 +207,71 @@ const endGame = (
   status,
   playsquares,
   xScore,
-  oScore
+  oScore,
+  pickOrder
 ) => {
   playsquares.forEach((square) => (square.style.pointerEvents = "none"));
+  switch (true) {
+    case pickOrder[1] === pickOrder[2] && pickOrder[2] === pickOrder[3]:
+      {
+        document.getElementById("1").classList.add("win");
+        document.getElementById("2").classList.add("win");
+        document.getElementById("3").classList.add("win");
+      }
+      break;
+    case pickOrder[4] === pickOrder[5] && pickOrder[5] === pickOrder[6]:
+      {
+        document.getElementById("4").classList.add("win");
+        document.getElementById("5").classList.add("win");
+        document.getElementById("6").classList.add("win");
+      }
+      break;
+    case pickOrder[7] === pickOrder[8] && pickOrder[8] === pickOrder[9]:
+      {
+        document.getElementById("7").classList.add("win");
+        document.getElementById("8").classList.add("win");
+        document.getElementById("9").classList.add("win");
+      }
+      break;
+    case pickOrder[1] === pickOrder[4] && pickOrder[4] === pickOrder[7]:
+      {
+        document.getElementById("1").classList.add("win");
+        document.getElementById("4").classList.add("win");
+        document.getElementById("7").classList.add("win");
+      }
+      break;
+    case pickOrder[2] === pickOrder[5] && pickOrder[5] === pickOrder[8]:
+      {
+        document.getElementById("2").classList.add("win");
+        document.getElementById("5").classList.add("win");
+        document.getElementById("8").classList.add("win");
+      }
+      break;
+    case pickOrder[3] === pickOrder[6] && pickOrder[6] === pickOrder[9]:
+      {
+        document.getElementById("3").classList.add("win");
+        document.getElementById("6").classList.add("win");
+        document.getElementById("9").classList.add("win");
+      }
+      break;
+    case pickOrder[1] === pickOrder[5] && pickOrder[5] === pickOrder[9]:
+      {
+        document.getElementById("1").classList.add("win");
+        document.getElementById("5").classList.add("win");
+        document.getElementById("9").classList.add("win");
+      }
+      break;
+    case pickOrder[3] === pickOrder[5] && pickOrder[5] === pickOrder[7]:
+      {
+        document.getElementById("3").classList.add("win");
+        document.getElementById("5").classList.add("win");
+        document.getElementById("7").classList.add("win");
+      }
+      break;
+
+    default:
+      break;
+  }
 
   if (winner === "X") {
     xScore.innerText++;
